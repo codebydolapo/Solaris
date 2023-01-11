@@ -33,7 +33,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className={`lg:w-[50%] h-inherit flex items-center justify-center xs:w-[100vw]`}>
-          <Link href="/">
+          <Link href="/destinations">
             <div className={`w-[25rem] h-[25rem] rounded-full hover:bg-[#ffffff1a] ease-in-out duration-[1s] text-black flex items-center justify-center`}>
               <div className={`text-black w-[20rem] h-[20rem] rounded-full flex flex-col items-center justify-center bg-white hover:scale-[105%] ease-in-out duration-[200ms] cursor-pointer`}>
                 <h1 className={`text-sm text-black tracking-[2px] font-light uppercase`}>Click To</h1>
