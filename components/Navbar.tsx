@@ -8,7 +8,7 @@ import { activateHamburger, deactivateHamburger } from "./reducers/action"
 
 function Navbar({place}: {place: string}) {
 
-    const active = "h-[90%] w-[20%] flex items-center justify-center border-b-[3px] border-b-[#2282f0] cursor-pointer"
+    const active = "h-[90%] w-[20%] flex items-center justify-center lg:border-b-[3px] lg:border-b-[#2282f0] cursor-pointer"
     const inactive = "h-[90%] w-[20%] flex items-center justify-center hover:border-b-[3px] hover:border-b-[#fff] cursor-pointer"
 
     const [homeEffect, setHomeEffect] = useState(inactive)
