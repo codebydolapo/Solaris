@@ -136,10 +136,10 @@ function FlightBooking() {
 
     return (
         <div className={`w-[100vw] h-[100vh] lg:pb-0 flex flex-col items-center justify-between bg-black overflow-y-scroll overflow-x-hidden xs:pb-4 ${styles.planet_main}`}>
-            <div className={`w-full h-[5rem] px-5 flex items-center justify-between px-3 mt-3`}>
-                <Link href="/destinations">
+            <div className={`w-full h-[5rem] px-5 flex items-center justify-between mt-3`}>
+                {/* <Link href="/destinations">
                     <ArrowLeftIcon className={`text-white lg:w-[3rem] font-thin cursor-pointer xs:w-[2rem]`} />
-                </Link>
+                </Link> */}
                 {account !== "" ?
                     <div className={`w-[12rem] h-[40px] bg-[#1266e4] rounded-lg flex justify-center items-around cursor-pointer`} onClick={connectWallet}>
                         <h1 className={`text-white lg:text-base xs:text-sm flex justify-center items-center`}>{`${account.slice(0, 6)}...${account.slice(38, 42)}`}</h1>
@@ -153,7 +153,7 @@ function FlightBooking() {
             <div className={`w-full lg:h-[80%] flex lg:flex-row items-center lg:my-0 lg:justify-center xs:flex-col xs:h-[80vh] xs:my-5`}>
                 <div className={`lg:w-[50%] h-full lg:my-0 flex flex-col items-center justify-around xs:w-full xs:my-5`}>
                     <img className={`lg:w-[25rem] lg:h-[25rem] xs:w-[90vw] xs:h-[90vw] ${styles.planet}`} src={image} alt='' />
-                    <input type="email" placeholder="Enter your email Address" className={`w-[90%] h-[45px] border-[1px] border-white text-white px-2 rounded-lg`} onChange={handleEmailAddress} value={userEmail} />
+                    {/* <input type="email" placeholder="Enter your email Address" className={`w-[90%] h-[45px] border-[1px] border-white text-white px-2 rounded-lg`} onChange={handleEmailAddress} value={userEmail} /> */}
                 </div>
                 <div className={`lg:w-[50%] h-full flex xs:w-full`}>
                     <div className={`lg:w-[50%] h-full xs:w-full`}>
@@ -197,12 +197,15 @@ function FlightBooking() {
                     </div>
                 </div>
             </div>
-            <div className={`w-full min-h-[5rem] flex items-center justify-center lg:pl-[5rem] lg:mt-0 xs:mt-[3rem]`}>
+            <div className={`w-full min-h-[5rem] flex items-center justify-around lg:pl-[5rem] lg:mt-0 lg:mb-0 xs:mt-[5rem] xs:mb-[1rem]`}>
                 {/* <button className={`lg:w-[15rem] h-[3rem] bg-[#2282f0] font-bold text-white rounded-lg lg:mx-3 xs:w-[10rem] hover:scale-[110%] ease-in-out duration-[200ms] cursor-pointer`}>Book Flight</button> */}
                 {paid ? <button className={`lg:w-[15rem] h-[3rem] bg-[#2282f0] font-bold text-white rounded-lg lg:mx-3 xs:w-[10rem] hover:scale-[110%] ease-in-out duration-[200ms] cursor-pointer`}>Payment Successful</button>
                     :
-                    <button className={`lg:w-[15rem] h-[3rem] bg-[#2282f0] font-bold text-white rounded-lg lg:mx-3 xs:w-[10rem] hover:scale-[110%] ease-in-out duration-[200ms] cursor-pointer`} onClick={handlePayment}>Book Flight</button>
+                    <button className={`lg:w-[15rem] h-[3rem] bg-[#2282f0] font-bold text-white rounded-lg lg:mx-5 xs:w-[48%] hover:scale-[110%] ease-in-out duration-[200ms] cursor-pointer`} onClick={handlePayment}>Book Flight</button>
                 }
+                <Link href="/destinations">
+                    <button className={`lg:w-[15rem] h-[3rem] bg-white font-bold text-[#313131] rounded-lg lg:mx-5 xs:w-[48%] hover:scale-[110%] ease-in-out duration-[200ms] cursor-pointer`} >Back</button>
+                </Link>
             </div>
         </div>
     )

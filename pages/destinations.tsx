@@ -179,7 +179,7 @@ const Destinations: NextPage = () => {
 
                     <h1 className={`text-7xl uppercase tracking-[5px] lg:mt-0 xs:mt-[2rem]`}>{destination}</h1>
 
-                    <h3 className={`text-xl leading-7 tracking-wide text-center lg:mt-0 xs:mt-[2rem]`}>{destDescription}</h3>
+                    <h3 className={`text-xl leading-7 tracking-wide text-center font-thin lg:mt-0 xs:mt-[2rem]`}>{destDescription}</h3>
 
                     <hr />
 
